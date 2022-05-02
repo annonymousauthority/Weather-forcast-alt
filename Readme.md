@@ -15,7 +15,7 @@
 > *** All db Models are defined in the src/model.js**
 
 
-### APIs TO IMPLEMENT
+### APIs IMPLEMENTED
 # Create Location
 To add a favorite location to the database call the `.../addlocation/:slug?long=&lat=`
 This function checks the forcast for that day using the 7Timer api, returns this values in a clean json format and stores this data to the database.
@@ -43,10 +43,11 @@ New Forcast for user's slug is checked every midnight... `00 00`
 ### POTENTIAL UPGRADES
 * --> User can undergo simple authentication by being given a `unique identifier` at the beginning to addlocation and for every operation by the user, the user must add this `unique identifier` to match with what's on the system.
 
+* --> A new users table can be set where each user is given a unique `id` or `api_key` where this key would be added to the url get request for every query done on the `location` database
 
 he exercise requires [Node.js](https://nodejs.org/en/) to be installed. We recommend using the LTS version.
 
-  
+ ## Technical Notes
 
 1. Start by cloning this repository.
 
@@ -62,9 +63,11 @@ he exercise requires [Node.js](https://nodejs.org/en/) to be installed. We recom
 
 4. Then run `npm start` which should start both the server and the React client.
 
-  
-## Technical Notes
 
+5. The database is the `LOCATION` database.
+  
+
+# Project Information
   
 
 - The server is running with [nodemon](https://nodemon.io/).
@@ -77,4 +80,8 @@ he exercise requires [Node.js](https://nodejs.org/en/) to be installed. We recom
 although not functional, this function can be called inside every get function in the `app.js` file.
 
 
+
+# Test
+--> `You can easily test the codes by running localhost using the information above`
+--> Access the database.sqlite file to access already existing file from date `2022-04-26` and `2022-04-27`
 
